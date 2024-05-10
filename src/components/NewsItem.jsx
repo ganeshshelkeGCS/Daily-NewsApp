@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import defaultImage from "./image/brk.jpg";
 
 class NewsItem extends Component {
 
@@ -10,7 +11,7 @@ class NewsItem extends Component {
         return (
             <div className='my-4'>
             <div className="card" style={{width: "18rem"}}>
-            <img src={imageUrl}  alt="..." />
+            <img src={!imageUrl ? defaultImage:imageUrl}  alt="" />
             <div className="card-body">
               <h5 className="card-title">{title}...</h5>
               <p className="card-text">{description}...</p>
