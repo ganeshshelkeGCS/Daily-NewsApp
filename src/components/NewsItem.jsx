@@ -1,15 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import defaultImage from "./image/brk.jpg";
 
-class NewsItem extends Component {
-  render() {
-    let { title, description, imageUrl, newsUrl, author, date, source } =
-      this.props;
+const NewsItem = (props) => {
+
+    let { title, description, imageUrl, newsUrl, author, date, source } = props;
 
     return (
       <div className="my-4">
         <div className="card">
-          <div style={{display: "flex", justifyContent: "flex-end", position: "absolute", right: 0, top: 0}}>
+          <div style={{display: "flex", justifyContent: "flex-end", position: "absolute", right: 1, top: 2}}>
             <span
               class="badge rounded-pill bg-danger"
             >
@@ -39,7 +38,7 @@ class NewsItem extends Component {
         </div>
       </div>
     );
-  }
+  
 }
 
 export default NewsItem;
